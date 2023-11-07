@@ -1,5 +1,5 @@
 int relay1 = 5;
-int relay2 = 11; //ground group
+int relay2 = 11; //motor -ve group
 
 void setup() {
   pinMode(relay1, OUTPUT); 
@@ -15,7 +15,7 @@ void setup() {
 }
 
 void loop() {
-  // Rotate in CCW direction
+  // Rotate in CCW direction 역전
   digitalWrite(relay1, HIGH); // turn relay 1 ON
   digitalWrite(relay2, LOW);  // turn relay 2 OFF
   Serial.println("Rotating in CCW");
